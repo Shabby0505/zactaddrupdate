@@ -1,0 +1,74 @@
+<mvc:View controllerName="zactaddrupdate.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" 	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" 	xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}" titleAlignment="Center">
+        <content >
+		
+    <VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormDisplayColumn_oneGroup234"
+			editable="false"
+			layout="ColumnLayout"
+			title=""
+			columnsM="2"
+			columnsL="3"
+			columnsXL="4"
+			>
+			<f:content>
+				<Label text="{i18n>txtNetwork}" required="true"/>
+				<Input id="idNetwork" maxLength="12" value=""></Input>
+				<Label text="{i18n>txtActivity}" required="true"/>
+				<Input id="idActivity" maxLength="4" value=""></Input>
+				<Toolbar>
+			<ToolbarSpacer/>
+			<Label text="" />
+				<Button  text="{i18n>btnPullAddress}" type="Emphasized" press="onPressPullAddress"></Button>
+			</Toolbar>
+			
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+
+    	<VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormDisplayColumn_oneGroup2345"
+			editable="false"
+			layout="ColumnLayout"
+			title="Address"
+			columnsM="2"
+			columnsL="3"
+			columnsXL="4"
+			>
+			<f:content>
+				<Label text="{i18n>Name1}" />
+				<Input id="idName1" maxLength="35" value="{oAddressModel>/Name1}" editable="{oeditableModel>/data/enabled}"></Input>
+				<Label text="{i18n>Name2}" />
+				<Input id="idName2" maxLength="35"  value="{oAddressModel>/Name2}"></Input>
+				<Label text="{i18n>Name3}" />
+			    <Input id="idName3" maxLength="35"  value="{oAddressModel>/Name3}"></Input>
+				<Label text="{i18n>Name4}" />
+				<Input id="idName4" maxLength="35"   value="{oAddressModel>/Name4}"></Input>
+				<Label text="{i18n>txtStreetAddress}" />
+			    <TextArea growing="true" id="idStreetAddress" maxLength="35"  value="{oAddressModel>/Address}"></TextArea>
+				<Label text="{i18n>txtCity}" />
+				<Input  id="idCity" maxLength="40"  value="{oAddressModel>/City}"></Input>
+				<Label text="{i18n>txtState}" />
+				<Input id="idState" maxLength="3"  value="{oAddressModel>/State}"></Input>
+				<Label text="{i18n>txtZipCode}" />
+				<Input id="idZipCode" maxLength="10"  value="{oAddressModel>/ZipCode}"></Input>
+				<Label text="{i18n>txtCountry}" />
+			    <Input id="idCountry" maxLength="3"  value="{oAddressModel>/Country}"></Input>
+             
+				
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+    </content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button type="Emphasized" text="{i18n>btnUpdate}" press="onPressUpdate" icon="sap-icon://post"  id="idButtonUpdate" enabled="false"/>
+				
+			</Toolbar>
+		</footer>
+    </Page>
+</mvc:View>
